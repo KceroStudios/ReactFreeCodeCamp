@@ -4,6 +4,7 @@ import Header from './components/Header'
 import EjercicioUno from './components/EjercicioUno'
 import EjercicioDos from './components/EjercicioDos'
 import EjercicioTres from './components/EjercicioTres'
+import EjercicioCuatro from './components/EjercicioCuatro'
 
 function App() {
     
@@ -13,7 +14,7 @@ function App() {
             <EjercicioUno />   
             <EjercicioDos />
             <EjercicioTres />
-
+            <EjercicioCuatro />
     </div>
   );
 }

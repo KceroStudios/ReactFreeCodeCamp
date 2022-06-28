@@ -3,21 +3,22 @@ import BotonCalculador from './EjercicioTresBoton'
 import Pantalla from './EjercicioTresPantalla'
 import BotonClear from './EjercicioTresBotonClear'
 import { useState } from 'react'
-import {evaluate} from 'mathjs'
+import { evaluate } from 'mathjs'
 
 function EjercicioTres () {
     const [input, setInput] = useState('');
-    const insertarInput = val => {
+    const agreagarInput = val => {
         setInput(input + val);
     }
-    const clearInput = () => {
-        setInput('')
-    }
-    const calcularInput = () =>{
-        if(input){
-            setInput(evaluate(input))
+    const calcularResultado = () => {
+        if (input){
+            setInput(evaluate(input));
+        }else{
+            
         }
+        
     }
+ 
     return(
     <div className="CalculadoraContenedor">
         <h3>1.- Crear una Calculadora</h3>
@@ -26,34 +27,34 @@ function EjercicioTres () {
         <div className='calculadora'>
             <Pantalla input={input}/>
             <div className='fila'>
-                <BotonCalculador manejarClick={insertarInput}>7</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>8</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>9</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>/</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>7</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>8</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>9</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>/</BotonCalculador>
             </div> 
 
             <div className='fila'>
-                <BotonCalculador manejarClick={insertarInput}>4</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>5</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>6</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>*</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>4</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>5</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>6</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>*</BotonCalculador>
             </div> 
 
             <div className='fila'>
-                <BotonCalculador manejarClick={insertarInput}>1</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>2</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>3</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>-</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>1</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>2</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>3</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>-</BotonCalculador>
             </div> 
 
             <div className='fila'>
-                <BotonCalculador manejarClick={calcularInput}>=</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>0</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>.</BotonCalculador>
-                <BotonCalculador manejarClick={insertarInput}>+</BotonCalculador>
+                <BotonCalculador manejarClic={calcularResultado}>=</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>0</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>.</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>+</BotonCalculador>
             </div>
 
-            <BotonClear clear ={clearInput}>Clear</BotonClear>
+            <BotonClear clear = {()=>setInput('')}>Clear</BotonClear>
 
         </div>
     </div>

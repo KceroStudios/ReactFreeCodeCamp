@@ -1,8 +1,8 @@
 
 const BotonClear = (props) => (
-    <div 
-    className="botonClear"
-    onClick = {props.clear}>
+    <div
+        className="botonClear"
+        onClick={ props.clear}>
         {props.children}
     </div>
 )

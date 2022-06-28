@@ -51,19 +51,20 @@
 }
 
 .input {
-    background: #111;
+    background: #222;
     height: 50px;
     border-radius: 7px;
     margin: 10px 5px 15px 5px;
     color: #fff;
-    font-size: 30px;
-    padding: 0 15px;
-    width: 294px;
-    border: 1px solid #333;
-    white-space: nowrap;
     display: flex;
-    flex-direction: row-reverse;
+    font-size: 25px;
+    white-space: nowrap;
+    width: 308px;
+    padding: 0 10px;
+    text-align: right;
+    display: flex;
     align-items: center;
+    flex-direction: row-reverse;
     overflow: hidden;
 }
 
@@ -72,11 +73,12 @@
     height: 50px;
     border-radius: 7px;
     margin: 10px 5px 15px 5px;
-    color: #be0000;
+    color: rgb(189, 11, 11);
     display: flex;
     font-size: 30px;
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
     cursor: pointer;
+    user-select: none;
 }
