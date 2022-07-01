@@ -1,9 +1,9 @@
-import '../css/EjercicioDos.css'
-import Contador from './EjercicioDosContador'
-import Botoncito from './EjercicioDosBoton'
+import Cuenta from './cuenta'
+import Botoncito from './contadorBoton'
 import { useState } from 'react'
+import '../../css/contador.css'
 
-function EjercicioDos (){
+function Contador (){
     const [numClicks, setNumClicks] = useState(0);
     const manejadorDeClick = () =>{
         setNumClicks (numClicks +1) ;
@@ -17,7 +17,7 @@ function EjercicioDos (){
             <h3>2.- Crear un Contador de Clicks</h3>
             <div className='contador-container'>
                 <h2>"Nunca fue tan sencillo contarlos"</h2>
-            <Contador 
+            <Cuenta 
                 numClicks={numClicks}/>
             <Botoncito
                 name='Click' clkButtom={true} manejadorDeClick ={manejadorDeClick}/>
@@ -28,4 +28,4 @@ function EjercicioDos (){
     )
 }
 
-export default EjercicioDos
+export default Contador

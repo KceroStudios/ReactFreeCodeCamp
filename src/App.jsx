@@ -1,20 +1,20 @@
 
 import './App.css'
-import Header from './components/Header'
-import EjercicioUno from './components/EjercicioUno'
-import EjercicioDos from './components/EjercicioDos'
-import EjercicioTres from './components/EjercicioTres'
-import EjercicioCuatro from './components/EjercicioCuatro'
+import Header from './components/header/Header'
+import Cards from './components/cards/cards';
+import Contador from './components/contadorDeClicks/contador';
+import Calculadora from './components/calculadora/calculadora';
+import ListaDeTarea from './components/listaDeTareas/listaDeTareas';
 
 function App() {
     
     return (
-        <div className="App">
-            <Header />
-            <EjercicioUno />   
-            <EjercicioDos />
-            <EjercicioTres />
-            <EjercicioCuatro />
+    <div className="App">
+        <Header />
+        <Cards />
+        <Contador />
+        <Calculadora />
+        <ListaDeTarea />
     </div>
   );
 }

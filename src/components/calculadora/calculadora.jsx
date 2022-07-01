@@ -1,11 +1,11 @@
-import '../css/EjercicioTres.css'
-import BotonCalculador from './EjercicioTresBoton'
-import Pantalla from './EjercicioTresPantalla'
-import BotonClear from './EjercicioTresBotonClear'
+import '../../css/calculadora.css'
+import BotonCalculador from './botonCalculadora'
+import Pantalla from './pantallaCalculadora'
+import BotonClear from './BotonClear'
 import { useState } from 'react'
 import { evaluate } from 'mathjs'
 
-function EjercicioTres () {
+function Calculadora () {
     const [input, setInput] = useState('');
     const agreagarInput = val => {
         setInput(input + val);
@@ -61,4 +61,4 @@ function EjercicioTres () {
     )
 }
 
-export default EjercicioTres
+export default Calculadora

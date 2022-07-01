@@ -1,7 +1,7 @@
 import Tarea from './Tarea'
 import TareaForm from './TareaForm'
 import { useState } from 'react'
-function ListaDeTareas (){
+function Tareas (){
     const [tareas, setTareas] = useState([])
     const agregarTarea = tarea => {
         if(tarea.texto.trim()){
@@ -37,8 +37,7 @@ function ListaDeTareas (){
                         completada={tarea.completada}
                         completarTarea={completarTarea}
                         eliminarTarea={eliminarTarea}
-                    /> )
-                    
+                    /> )         
                     
                     
                 }
@@ -48,4 +47,4 @@ function ListaDeTareas (){
     )
 }
 
-export default ListaDeTareas
+export default Tareas
