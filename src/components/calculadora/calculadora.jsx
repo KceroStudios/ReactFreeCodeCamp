@@ -20,10 +20,6 @@ function Calculadora () {
     }
  
     return(
-    <div className="CalculadoraContenedor">
-        <h3>1.- Crear una Calculadora</h3>
-        <h2>A Calcular Ya!</h2>
-
         <div className='calculadora'>
             <Pantalla input={input}/>
             <div className='fila'>
@@ -55,9 +51,7 @@ function Calculadora () {
             </div>
 
             <BotonClear clear = {()=>setInput('')}>Clear</BotonClear>
-
         </div>
-    </div>
     )
 }
 
