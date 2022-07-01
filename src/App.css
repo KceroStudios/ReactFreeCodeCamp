@@ -31,8 +31,44 @@ h3{
   align-items: center;
 }
 
-.header {
+.agenda{
+  background: url('./image/lether.jpg');
+  height: 550px;
+  width: 800px;
+  border-radius: 10px;
+  border: 2px solid #481903;
+  padding: 12px;
+}
+.sombra{
+  background-image: url(./image/sombra.png);
+  background-size: contain;
+  height: 80px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+.costura {
+  border: 2px dashed #481903;
+  height: 93%;
+  border-radius: 5px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 2%;
+}
+
+.agenda .col{
+  width: 50%;
+  margin: 5px;
+  padding: 10px;
+}
+
+.agenda .col1{
+  border-right: 2px dashed #481903;
+  padding-right: 30px;
+  background: linear-gradient(280deg, #48190373, transparent);
+}
+
+.agenda .col2 {
+  border-left: 2px dashed #481903;
+  padding-left: 30px;
+  background: linear-gradient(70deg, #48190373, transparent);
 }

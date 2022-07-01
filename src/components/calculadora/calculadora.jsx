@@ -1,11 +1,11 @@
-import '../css/EjercicioTres.css'
-import BotonCalculador from './EjercicioTresBoton'
-import Pantalla from './EjercicioTresPantalla'
-import BotonClear from './EjercicioTresBotonClear'
+import '../../css/calculadora.css'
+import BotonCalculador from './botonCalculadora'
+import Pantalla from './pantallaCalculadora'
+import BotonClear from './BotonClear'
 import { useState } from 'react'
 import { evaluate } from 'mathjs'
 
-function EjercicioTres () {
+function Calculadora () {
     const [input, setInput] = useState('');
     const agreagarInput = val => {
         setInput(input + val);
@@ -20,10 +20,6 @@ function EjercicioTres () {
     }
  
     return(
-    <div className="CalculadoraContenedor">
-        <h3>1.- Crear una Calculadora</h3>
-        <h2>A Calcular Ya!</h2>
-
         <div className='calculadora'>
             <Pantalla input={input}/>
             <div className='fila'>
@@ -55,10 +51,8 @@ function EjercicioTres () {
             </div>
 
             <BotonClear clear = {()=>setInput('')}>Clear</BotonClear>
-
         </div>
-    </div>
     )
 }
 
-export default EjercicioTres
+export default Calculadora

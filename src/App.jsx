@@ -1,22 +1,33 @@
 
-import './App.css'
-import Header from './components/Header'
-import EjercicioUno from './components/EjercicioUno'
-import EjercicioDos from './components/EjercicioDos'
-import EjercicioTres from './components/EjercicioTres'
-import EjercicioCuatro from './components/EjercicioCuatro'
+import './App.css';
+import Header from './components/header/Header';
+import Cards from './components/cards/cards';
+import Contador from './components/contadorDeClicks/contador';
+import Calculadora from './components/calculadora/calculadora';
+import ListaDeTarea from './components/listaDeTareas/listaDeTareas';
 
 function App() {
-    
     return (
         <div className="App">
+            <div className="agenda">
+                <div className="costura">
+                    <div className="col col1">
+                    <Calculadora />
+                    </div>
+                    <div className="col col2">
+                        columna2
+                    </div>
+                </div>
+            </div>
+            <div className="sombra"></div>
+            
             <Header />
-            <EjercicioUno />   
-            <EjercicioDos />
-            <EjercicioTres />
-            <EjercicioCuatro />
-    </div>
-  );
+            <Cards />
+            <Contador />
+           
+            <ListaDeTarea />
+        </div>
+    );
 }
 
 export default App;
