@@ -1,10 +1,10 @@
 
 const BotonClear = (props) => (
-    <div
-        className="botonClear"
+    <button
+        className="botonClear botonCalculador"
         onClick={ props.clear}>
         {props.children}
-    </div>
+    </button>
 )
 
 export default BotonClear

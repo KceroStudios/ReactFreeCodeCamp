@@ -2,6 +2,7 @@ import '../../css/calculadora.css'
 import BotonCalculador from './botonCalculadora'
 import Pantalla from './pantallaCalculadora'
 import BotonClear from './BotonClear'
+import Brand from './brand'
 import { useState } from 'react'
 import { evaluate } from 'mathjs'
 
@@ -21,6 +22,7 @@ function Calculadora () {
  
     return(
         <div className='calculadora'>
+            <Brand />
             <Pantalla input={input}/>
             <div className='fila'>
                 <BotonCalculador manejarClic={agreagarInput}>7</BotonCalculador>
@@ -50,7 +52,14 @@ function Calculadora () {
                 <BotonCalculador manejarClic={agreagarInput}>+</BotonCalculador>
             </div>
 
-            <BotonClear clear = {()=>setInput('')}>Clear</BotonClear>
+            <div className='fila'>
+                <BotonClear clear = {()=>setInput('')}>C</BotonClear>
+                <BotonCalculador manejarClic={agreagarInput}>+</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>+</BotonCalculador>
+                <BotonCalculador manejarClic={agreagarInput}>+</BotonCalculador>
+            </div>
+
+            
         </div>
     )
 }

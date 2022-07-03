@@ -41,10 +41,10 @@ h3{
 }
 .sombra{
   background-image: url(./image/sombra.png);
-  background-size: contain;
-  height: 80px;
-  width: 100%;
+  height: 62px;
+  width: 800px;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .costura {

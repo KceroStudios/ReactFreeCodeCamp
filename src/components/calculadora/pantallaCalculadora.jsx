@@ -1,7 +1,9 @@
 
-const Pantalla = ({input}) => (
-    <div className="input">
-        {input}
+const Pantalla = ({input}) => (   
+    <div className="pantalla">
+        <div className="input">
+            {input}
+        </div>
     </div>
 )
 
